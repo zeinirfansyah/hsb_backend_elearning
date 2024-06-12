@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     nama_sub: DataTypes.STRING,
     thumbnail_sub: DataTypes.STRING,
     gratis: DataTypes.BOOLEAN,
-    id_pelajaran: DataTypes.INTEGER
+    id_bab: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'subbab',

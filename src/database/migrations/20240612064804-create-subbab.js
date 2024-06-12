@@ -18,7 +18,7 @@ module.exports = {
       gratis: {
         type: Sequelize.BOOLEAN
       },
-      id_pelajaran: {
+      id_bab: {
         type: Sequelize.INTEGER
       },
       createdAt: {
