@@ -4,6 +4,7 @@ require("dotenv").config({ path: path.join(__dirname, "../../.env") });
 const express = require("express");
 const { cors } = require("./middlewares/app");
 const authRouter = require("./routes/auth.router");
+const routes = require("./routes/routes");
 
 const app = express();
 
@@ -19,6 +20,8 @@ if (!process.env.JWT_SECRET) {
 }
 
 app.use("/api/auth", authRouter);
+app.use("/api/", routes);
+
 app.listen(3000, () => {
   console.log("Server udah jalan! di port 3000");
 });
