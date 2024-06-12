@@ -16,15 +16,21 @@ module.exports = (sequelize, DataTypes) => {
       modePembelajaranKelas.belongsTo(models.Kelas, {
         foreignKey: "id_kelas",
       });
-      
+
       modePembelajaranKelas.hasMany(models.mataPelajaran, {
         foreignKey: "id_mpk",
-      })
+      });
     }
   }
 
   modePembelajaranKelas.init(
     {
+      id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true,
+      },
+      
       id_mode: DataTypes.INTEGER,
       id_kelas: DataTypes.INTEGER,
     },
