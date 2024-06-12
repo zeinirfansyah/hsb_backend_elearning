@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
 
-      progres.belongsTo(models.materi, {
+      progres.belongsTo(models.materials, {
         foreignKey: 'id_materi'
       })
 

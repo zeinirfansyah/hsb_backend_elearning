@@ -15,6 +15,10 @@ module.exports = (sequelize, DataTypes) => {
       bab.belongsTo(models.mataPelajaran, {
         foreignKey: 'id_pelajaran'
       })
+
+      bab.hasMany(models.subbab, {
+        foreignKey: 'id_bab'
+      })
     }
   }
   bab.init({

@@ -15,6 +15,10 @@ module.exports = (sequelize, DataTypes) => {
       mataPelajaran.belongsTo(models.modepembelajarankelas, {
         foreignKey: 'id_mpk'
       })
+
+      mataPelajaran.hasMany(models.bab, {
+        foreignKey: 'id_pelajaran'
+      })
     }
   }
   mataPelajaran.init({

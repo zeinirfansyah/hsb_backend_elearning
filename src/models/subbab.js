@@ -15,6 +15,10 @@ module.exports = (sequelize, DataTypes) => {
       subbab.belongsTo(models.bab, {
         foreignKey: 'id_bab'
       })
+
+      subbab.hasMany(models.materials, {
+        foreignKey: 'id_sub'
+      })
     }
   }
   subbab.init({
