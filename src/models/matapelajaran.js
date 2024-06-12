@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
 
-      mataPelajaran.belongsTo(models.modepembelajarankelas, {
+      mataPelajaran.belongsTo(models.modePembelajaranKelas, {
         foreignKey: 'id_mpk'
       })
 

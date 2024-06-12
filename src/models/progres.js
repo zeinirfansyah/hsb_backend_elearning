@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'id_materi'
       })
 
-      progres.belongsTo(models.user, {
+      progres.belongsTo(models.User, {
         foreignKey: 'id_user'
       })
     }

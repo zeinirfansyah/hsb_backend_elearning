@@ -47,16 +47,4 @@ Object.keys(db).forEach((modelName) => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-db.kelas.belongsToMany(db.modepembelajaran, {
-  through: "KelasModePembelajaran",
-  as: "modepembelajarans",
-  foreignKey: "id_kelas",
-});
-
-db.modepembelajaran.belongsToMany(db.kelas, {
-  through: "KelasModePembelajaran",
-  as: "kelas",
-  foreignKey: "id_modepembelajaran",
-});
-
 module.exports = db;

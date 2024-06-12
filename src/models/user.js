@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
 
-      User.hasMany(models.Progres, {
+      User.hasMany(models.progres, {
         foreignKey: 'id_user'
       })
     }
